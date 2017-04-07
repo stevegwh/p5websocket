@@ -1,6 +1,11 @@
 var socket;
 function setup() {
-  socket = io.connect('localhost:3000');
+  //socket = io.connect('localhost:3000');
+  io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+  });
+  socket = new io.Socket();
   socket.on('mouse', newDrawing);
   var canvas = createCanvas(640,480);
   canvas.parent("sketch");
