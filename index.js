@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var socket = require('socket.io');
 
-var server = app.listen(3000);
+var server = app.listen(3000 || process.env.PORT);
 console.log("Running on port 3000");
 app.use(express.static('public'));
 
