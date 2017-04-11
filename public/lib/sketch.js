@@ -36,7 +36,7 @@ function mouseDragged() {
 }
 
 function touchMoved() {
-
+    window.onscroll = function () { window.scrollTo(0, 0); };
     noStroke();
     ellipse(mouseX, mouseY, 15, 15);
     var data = {
