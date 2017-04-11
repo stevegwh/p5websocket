@@ -4,7 +4,7 @@ function setup() {
     socket = io.connect('https://p5websocket.herokuapp.com/');
     socket.on('mouse', newDrawing);
     socket.on('userConnect', updateUsers);
-    var canvas = createCanvas(640, 480);
+    var canvas = createCanvas(1000, 1000);
     canvas.parent("sketch");
     background(0);
 }
