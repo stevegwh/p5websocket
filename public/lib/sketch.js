@@ -17,22 +17,19 @@ function newDrawing(data) {
 
 function updateUsers(data) {
     $('#userNum').text(data);
-    console.log(data);
-    console.log("got this far");
 }
 
 function draw() {
     fill(255);
     if (mouseIsPressed) {
-        if (mouseButton == LEFT) {
-            noStroke();
-            ellipse(mouseX, mouseY, 15, 15);
-            var data = {
-                x: mouseX,
-                y: mouseY
-            }
 
-            socket.emit('mouse', data);
+        noStroke();
+        ellipse(mouseX, mouseY, 15, 15);
+        var data = {
+            x: mouseX,
+            y: mouseY
         }
+
+        socket.emit('mouse', data);
     }
 }
