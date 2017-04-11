@@ -23,7 +23,7 @@ function draw() {
     fill(255);
 }
 
-function mousePressed() {
+function mouseDragged() {
 
     noStroke();
     ellipse(mouseX, mouseY, 15, 15);
@@ -35,7 +35,7 @@ function mousePressed() {
     socket.emit('mouse', data);
 }
 
-function touchStarted() {
+function touchMoved() {
 
     noStroke();
     ellipse(mouseX, mouseY, 15, 15);
